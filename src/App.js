@@ -2,7 +2,14 @@ import React, {Component} from 'react'
 import {Redirect, Switch, Route} from 'react-router'
 import styled from 'styled-components'
 import {NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap'
-import {TestAlert, TestBadge, TestButton} from './components'
+import {
+  TestAlert,
+  TestBadge,
+  TestButton,
+  TestButtonGroup,
+  TestCheckbox,
+  TestCopyToClipboard,
+} from './components'
 
 const StyledApp = styled.div`
   display: flex;
@@ -54,18 +61,24 @@ const SideNav = ({...props}) => {
     <StyledApp>
       <StyledSideNav>
         <Nav className="ml-auto" navbar>
-          <NavbarBrand href="/">Cast UI</NavbarBrand>
-          <StyledNavItem>
-            <NavLink href="/home">Home</NavLink>
-          </StyledNavItem>
+          <NavbarBrand href="/home">Cast UI</NavbarBrand>
           <StyledNavItem>
             <NavLink href="/alert">Alert</NavLink>
           </StyledNavItem>
           <StyledNavItem>
-            <NavLink href="/Badge">Badge</NavLink>
+            <NavLink href="/badge">Badge</NavLink>
           </StyledNavItem>
           <StyledNavItem>
-            <NavLink href="/Button">Button</NavLink>
+            <NavLink href="/button">Button</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/button-group">ButtonGroup</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/checkbox">Checkbox</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/copy-to-clipboard">CopyToClipboard</NavLink>
           </StyledNavItem>
         </Nav>
       </StyledSideNav>
@@ -95,6 +108,12 @@ class App extends Component {
                   <Route path="/alert" component={TestAlert} />
                   <Route path="/badge" component={TestBadge} />
                   <Route path="/button" component={TestButton} />
+                  <Route path="/button-group" component={TestButtonGroup} />
+                  <Route path="/checkbox" component={TestCheckbox} />
+                  <Route
+                    path="/copy-to-clipboard"
+                    component={TestCopyToClipboard}
+                  />
                 </Switch>
               </Main>
             </SideNav>

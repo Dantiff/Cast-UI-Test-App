@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-// import {Badge} from '@tkxs/cast-ui'
+// import {ButtonGroup} from '@tkxs/cast-ui'
 
-export class TestBadge extends Component {
+export class TestButtonGroup extends Component {
   render() {
     return (
       <header className="">
-        {/* <Badge /> */}
+        <br />
         Coming soon
         <br />
       </header>
@@ -13,4 +13,4 @@ export class TestBadge extends Component {
   }
 }
 
-export default TestBadge
+export default TestButtonGroup
