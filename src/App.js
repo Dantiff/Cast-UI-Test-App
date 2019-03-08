@@ -9,6 +9,11 @@ import {
   TestButtonGroup,
   TestCheckbox,
   TestCopyToClipboard,
+  TestDatepicker,
+  TestDraggable,
+  TestIconButton,
+  TestInput,
+  TestInputGroup,
 } from './components'
 
 const StyledApp = styled.div`
@@ -80,6 +85,21 @@ const SideNav = ({...props}) => {
           <StyledNavItem>
             <NavLink href="/copy-to-clipboard">CopyToClipboard</NavLink>
           </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/datepicker">Datepicker</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/draggable">Draggable</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/icon-button">IconButton</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/input">Input</NavLink>
+          </StyledNavItem>
+          <StyledNavItem>
+            <NavLink href="/input-group">InputGroup</NavLink>
+          </StyledNavItem>
         </Nav>
       </StyledSideNav>
       <StyledAppColumn>{props.children}</StyledAppColumn>
@@ -114,6 +134,11 @@ class App extends Component {
                     path="/copy-to-clipboard"
                     component={TestCopyToClipboard}
                   />
+                  <Route path="/datepicker" component={TestDatepicker} />
+                  <Route path="/draggable" component={TestDraggable} />
+                  <Route path="/icon-button" component={TestIconButton} />
+                  <Route path="/input" component={TestInput} />
+                  <Route path="/input-group" component={TestInputGroup} />
                 </Switch>
               </Main>
             </SideNav>

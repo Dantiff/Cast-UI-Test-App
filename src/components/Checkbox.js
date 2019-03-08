@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Checkbox} from '@tkxs/cast-ui'
+// import {Checkbox} from '@tkxs/cast-ui'
 
 export class TestCheckbox extends Component {
   render() {

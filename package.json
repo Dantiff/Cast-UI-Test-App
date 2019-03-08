@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tkxs/cast-ui": "^0.1.10",
+    "@tkxs/cast-ui": "^0.1.11",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-icons-kit": "^1.2.1",
