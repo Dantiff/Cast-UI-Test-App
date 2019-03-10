@@ -1,20 +1,9 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {Redirect, Switch, Route} from 'react-router'
 import styled from 'styled-components'
-import {NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap'
-import {
-  TestAlert,
-  TestBadge,
-  TestButton,
-  TestButtonGroup,
-  TestCheckbox,
-  TestCopyToClipboard,
-  TestDatepicker,
-  TestDraggable,
-  TestIconButton,
-  TestInput,
-  TestInputGroup,
-} from './components'
+import {NavbarBrand, Nav, NavItem} from 'reactstrap'
+import * as Components from './components'
 
 const StyledApp = styled.div`
   display: flex;
@@ -60,46 +49,18 @@ const StyledNavItem = styled(NavItem)`
     color: wheat;
   }
 `
-
 const SideNav = ({...props}) => {
   return (
     <StyledApp>
       <StyledSideNav>
         <Nav className="ml-auto" navbar>
           <NavbarBrand href="/home">Cast UI</NavbarBrand>
-          <StyledNavItem>
-            <NavLink href="/alert">Alert</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/badge">Badge</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/button">Button</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/button-group">ButtonGroup</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/checkbox">Checkbox</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/copy-to-clipboard">CopyToClipboard</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/datepicker">Datepicker</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/draggable">Draggable</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/icon-button">IconButton</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/input">Input</NavLink>
-          </StyledNavItem>
-          <StyledNavItem>
-            <NavLink href="/input-group">InputGroup</NavLink>
-          </StyledNavItem>
+
+          {Object.keys(Components).map(component => (
+            <StyledNavItem key={component}>
+              <Link to={component.split('Test')[1]}>{component} </Link>
+            </StyledNavItem>
+          ))}
         </Nav>
       </StyledSideNav>
       <StyledAppColumn>{props.children}</StyledAppColumn>
@@ -125,20 +86,13 @@ class App extends Component {
                     path="/"
                     render={() => <Redirect to="/home" />}
                   />
-                  <Route path="/alert" component={TestAlert} />
-                  <Route path="/badge" component={TestBadge} />
-                  <Route path="/button" component={TestButton} />
-                  <Route path="/button-group" component={TestButtonGroup} />
-                  <Route path="/checkbox" component={TestCheckbox} />
-                  <Route
-                    path="/copy-to-clipboard"
-                    component={TestCopyToClipboard}
-                  />
-                  <Route path="/datepicker" component={TestDatepicker} />
-                  <Route path="/draggable" component={TestDraggable} />
-                  <Route path="/icon-button" component={TestIconButton} />
-                  <Route path="/input" component={TestInput} />
-                  <Route path="/input-group" component={TestInputGroup} />
+                  {Object.keys(Components).map(component => (
+                    <Route
+                      key={component}
+                      path={`/${component.split('Test')[1]}`}
+                      component={Components[component]}
+                    />
+                  ))}
                 </Switch>
               </Main>
             </SideNav>

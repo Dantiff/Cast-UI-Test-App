@@ -13,17 +13,16 @@ export class TestCopyToClipboard extends Component {
       <header className="">
         <div>
           <CopyToClipboard
-            copyContent="
-          `
-    <CopyToClipboard
-      copyContent='Some text that is usually copied to clipboard.'
-      copyContainerClass='copy-container'
-      background='lightBackground'
-      includeCopyButton={true}
-      copyButtonContent='copy'
-      copyButtonClass='copy-button'
-    />
-          `"
+            copyContent={`
+  <CopyToClipboard
+    copyContent='Some text that is usually copied to clipboard.'
+    copyContainerClass='copy-container'
+    background='lightBackground'
+    includeCopyButton={true}
+    copyButtonContent='copy'
+    copyButtonClass='copy-button'
+  />
+          `}
             copyContainerClass="copy-container"
             background="lightBackground"
             includeCopyButton

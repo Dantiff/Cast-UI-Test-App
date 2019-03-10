@@ -6,7 +6,7 @@ export class TestInputGroup extends Component {
     return (
       <header className="">
         <InputGroup label="This is my label" inputSize="md">
-          <Input id="myInput" placeholder="Sample input group" />
+          <Input id="myInput" placeholder="Sample input group" invalid />
         </InputGroup>
         <br />
       </header>

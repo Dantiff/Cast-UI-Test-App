@@ -9,5 +9,6 @@ export * from './Draggable'
 export * from './IconButton'
 export * from './Input'
 export * from './InputGroup'
+export * from './Modal'
 
 export * from './Panel'
