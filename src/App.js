@@ -42,11 +42,13 @@ const StyledAppColumn = styled.div`
 const Main = styled.main`
   position: relative;
   min-height: calc(100vh - 138px);
+  text-align: left;
 `
 const StyledNavItem = styled(NavItem)`
-  padding: 12px 8px;
+  padding: 8px 8px;
   a {
     color: wheat;
+    padding: 6px 8px;
   }
 `
 const SideNav = ({...props}) => {
@@ -58,7 +60,9 @@ const SideNav = ({...props}) => {
 
           {Object.keys(Components).map(component => (
             <StyledNavItem key={component}>
-              <Link to={component.split('Test')[1]}>{component} </Link>
+              <Link to={component.split('Test')[1]}>
+                {component.split('Test')[1]}
+              </Link>
             </StyledNavItem>
           ))}
         </Nav>
