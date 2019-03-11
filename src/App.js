@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import {Redirect, Switch, Route} from 'react-router'
-import styled from 'styled-components'
-import {NavbarBrand, Nav, NavItem} from 'reactstrap'
-import * as Components from './components'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Redirect, Switch, Route } from 'react-router';
+import styled from 'styled-components';
+import { NavbarBrand, Nav, NavItem } from 'reactstrap';
+import * as Components from './components';
 
 const StyledApp = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const StyledApp = styled.div`
   a {
     text-decoration: none;
   }
-`
+`;
 const StyledSideNav = styled.div`
   width: 20%;
   background-color: #282c34;
@@ -25,7 +25,7 @@ const StyledSideNav = styled.div`
   .navbar-nav {
     list-style: none;
   }
-`
+`;
 const StyledAppColumn = styled.div`
   flex-grow: 1;
   background: gray;
@@ -38,20 +38,25 @@ const StyledAppColumn = styled.div`
     font-size: calc(10px + 2vmin);
     color: white;
   }
-`
+`;
 const Main = styled.main`
   position: relative;
-  min-height: calc(100vh - 138px);
+  min-height: 90vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   text-align: left;
-`
+  > * {
+    width: 80%;
+  }
+`;
 const StyledNavItem = styled(NavItem)`
   padding: 8px 8px;
   a {
     color: wheat;
     padding: 6px 8px;
   }
-`
-const SideNav = ({...props}) => {
+`;
+const SideNav = ({ ...props }) => {
   return (
     <StyledApp>
       <StyledSideNav>
@@ -69,8 +74,8 @@ const SideNav = ({...props}) => {
       </StyledSideNav>
       <StyledAppColumn>{props.children}</StyledAppColumn>
     </StyledApp>
-  )
-}
+  );
+};
 
 class App extends Component {
   componentDidMount() {}
@@ -80,7 +85,7 @@ class App extends Component {
   render() {
     return (
       <Route
-        render={({location, history}) => (
+        render={({ location, history }) => (
           <React.Fragment>
             <SideNav>
               <Main>
@@ -103,8 +108,8 @@ class App extends Component {
           </React.Fragment>
         )}
       />
-    )
+    );
   }
 }
 
-export default App
+export default App;

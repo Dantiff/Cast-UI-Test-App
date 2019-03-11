@@ -1,28 +1,28 @@
-import React, {Component} from 'react'
-// import {Select} from '@tkxs/cast-ui'
+import React, { Component } from 'react';
+import { Select } from '@tkxs/cast-ui';
 
 export class TestSelect extends Component {
   render() {
     return (
       <header className="">
         <div>
-          {/* <Select
+          <Select
             id="mySelect"
             disabled={false}
             inputSize="md"
-            invalid={false}
+            invalid={true}
             invalidText="A valid value is required"
+            autocomplete
             options={[
-              {value: 'chocolate', label: 'Chocolate'},
-              {value: 'strawberry', label: 'Strawberry'},
-              {value: 'vanilla', label: 'Vanilla'},
+              { value: 'chocolate', label: 'Chocolate' },
+              { value: 'strawberry', label: 'Strawberry' },
+              { value: 'vanilla', label: 'Vanilla' },
             ]}
-          /> */}
+          />
         </div>
-        Coming soon
       </header>
-    )
+    );
   }
 }
 
-export default TestSelect
+export default TestSelect;

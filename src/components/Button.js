@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import {Button} from '@tkxs/cast-ui'
+import {Button, Themes} from '@tkxs/cast-ui'
 
 const StyledButton = styled(Button)`
   background: red;
@@ -10,7 +10,7 @@ export class TestButton extends Component {
     return (
       <header className="">
         <br />
-        <Button btnStyle="primary" outline>
+        <Button label={'Enroll'} btnStyle="success" theme={Themes.defaultTheme}>
           Click for Awesomeness
         </Button>
         <br />
@@ -18,6 +18,17 @@ export class TestButton extends Component {
         <StyledButton btnStyle="primary" outline>
           Click for Awesomeness
         </StyledButton>
+        <br />
+        <br />
+
+        <Button
+          label={'Enroll'}
+          btnStyle="success"
+          theme={Themes.defaultTheme}
+          onClick={() => {}}>
+          {' '}
+          Greetings{' '}
+        </Button>
         <br />
       </header>
     )

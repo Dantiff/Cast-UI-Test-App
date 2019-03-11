@@ -1,32 +1,33 @@
-import React, {Component} from 'react'
-// import {Checkbox} from '@tkxs/cast-ui'
+import React, { Component } from 'react';
+import { Checkbox } from '@tkxs/cast-ui';
 
 export class TestCheckbox extends Component {
   render() {
     return (
       <header className="">
-        {/* <div>
+        <div>
           <Checkbox
             id="myInput1"
-            cbSize="md"
+            cbSize="lg"
             defaultChecked
             disabled={false}
-            value="1">
+            value="1"
+          >
             One
           </Checkbox>
           <Checkbox
             id="myInput2"
-            cbSize="md"
+            cbSize="lg"
             defaultChecked
             disabled={false}
-            value="2">
+            value="2"
+          >
             Two
           </Checkbox>
-        </div> */}
-        Coming soon
+        </div>
       </header>
-    )
+    );
   }
 }
 
-export default TestCheckbox
+export default TestCheckbox;

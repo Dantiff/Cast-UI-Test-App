@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 // import Icon from 'react-icons-kit'
 // import {ic_keyboard_arrow_down as IKAD} from 'react-icons-kit/md/ic_keyboard_arrow_down'
 // import {ic_add as icAdd} from 'react-icons-kit/md/ic_add'
@@ -90,8 +90,8 @@ export class TestDraggable extends Component {
         <br />
         Coming soon
       </header>
-    )
+    );
   }
 }
 
-export default TestDraggable
+export default TestDraggable;
