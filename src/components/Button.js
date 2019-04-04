@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import styled from 'styled-components'
-import {Button, Themes} from '@tkxs/cast-ui'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Button, Themes } from '@tkxs/cast-ui/lib-esm';
 
 const StyledButton = styled(Button)`
   background: red;
-`
+`;
 export class TestButton extends Component {
   render() {
     return (
@@ -25,14 +25,15 @@ export class TestButton extends Component {
           label={'Enroll'}
           btnStyle="success"
           theme={Themes.defaultTheme}
-          onClick={() => {}}>
+          onClick={() => {}}
+        >
           {' '}
           Greetings{' '}
         </Button>
         <br />
       </header>
-    )
+    );
   }
 }
 
-export default TestButton
+export default TestButton;

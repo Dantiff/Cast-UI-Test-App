@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
-import {CopyToClipboard} from '@tkxs/cast-ui'
-import Icon from 'react-icons-kit'
-import {ic_content_copy as ICopy} from 'react-icons-kit/md/ic_content_copy'
-import {ic_check as icCheck} from 'react-icons-kit/md/ic_check'
+import React, { Component } from 'react';
+import { CopyToClipboard, Themes } from '@tkxs/cast-ui';
+import Icon from 'react-icons-kit';
+import { ic_content_copy as ICopy } from 'react-icons-kit/md/ic_content_copy';
+import { ic_check as icCheck } from 'react-icons-kit/md/ic_check';
 
-const SecondaryCopyContent = () => <Icon size={16} icon={ICopy} />
-const SecondaryCopySuccessContent = () => <Icon size={16} icon={icCheck} />
+const SecondaryCopyContent = () => <Icon size={16} icon={ICopy} />;
+const SecondaryCopySuccessContent = () => <Icon size={16} icon={icCheck} />;
 
 export class TestCopyToClipboard extends Component {
   render() {
@@ -29,6 +29,7 @@ export class TestCopyToClipboard extends Component {
             copyButtonContent="copy"
             copyButtonClass="copy-button"
             fullWidth
+            theme={{ ...Themes.defaultTheme }}
           />
           <br />
           <CopyToClipboard
@@ -36,11 +37,12 @@ export class TestCopyToClipboard extends Component {
             copyButtonContent={<SecondaryCopyContent />}
             copyButtonSuccessContent={<SecondaryCopySuccessContent />}
             fullWidth={false}
+            theme={{ ...Themes.defaultTheme }}
           />
         </div>
       </header>
-    )
+    );
   }
 }
 
-export default TestCopyToClipboard
+export default TestCopyToClipboard;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert } from '@tkxs/cast-ui';
+import { Alert } from '@tkxs/cast-ui/lib-esm';
 
 export class TestAlert extends Component {
   render() {
