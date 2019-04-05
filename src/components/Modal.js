@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Button } from '@tkxs/cast-ui';
+import { Modal, Button } from '@tkxs/cast-ui/lib-esm';
 
 export class TestModal extends Component {
   constructor(props) {
@@ -17,6 +17,14 @@ export class TestModal extends Component {
   }
   render() {
     const { isModalOpen } = this.state;
+    const ModalFooter = () => (
+      <div>
+        <Button onClick={this.toggleModal} btnStyle="primary">
+          {' '}
+          Close Modal
+        </Button>
+      </div>
+    );
     return (
       <header className="">
         <Button onClick={this.toggleModal} btnStyle="primary">
@@ -28,8 +36,8 @@ export class TestModal extends Component {
           id="myModal"
           buttonType="OkCancel"
           modalTitle="Hello Modal"
-          onCancelOrNo={this.toggleModal}
           onOkOrYes={this.toggleModal}
+          footerContent={<ModalFooter />}
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

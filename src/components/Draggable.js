@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-// import Icon from 'react-icons-kit'
-// import {ic_keyboard_arrow_down as IKAD} from 'react-icons-kit/md/ic_keyboard_arrow_down'
-// import {ic_add as icAdd} from 'react-icons-kit/md/ic_add'
-// import {info} from 'react-icons-kit/fa/info'
-// import {
-//   Draggable,
-//   DraggableInfo,
-//   DraggableParent,
-//   DraggableFooter,
-//   DraggableItem,
-//   IconButton,
-// } from '@tkxs/cast-ui'
+import Icon from 'react-icons-kit';
+import { ic_keyboard_arrow_down as IKAD } from 'react-icons-kit/md/ic_keyboard_arrow_down';
+import { ic_add as icAdd } from 'react-icons-kit/md/ic_add';
+import { info } from 'react-icons-kit/fa/info';
+import {
+  Draggable,
+  DraggableInfo,
+  DraggableParent,
+  DraggableFooter,
+  DraggableItem,
+  IconButton,
+} from '@tkxs/cast-ui/lib-esm';
 
 export class TestDraggable extends Component {
   render() {
     return (
       <header className="">
-        {/* <Draggable>
+        <Draggable>
           <DraggableInfo>
             <IconButton
               rounded
@@ -32,12 +32,14 @@ export class TestDraggable extends Component {
             parentActive={false}
             parenthandlesize={30}
             showparenthandle
-            draggable>
+            draggable
+          >
             <DraggableParent.ParentMainContent>
               <DraggableItem.ItemContainer
                 showitemhandle
                 itemhandlesize={30}
-                draggable>
+                draggable
+              >
                 <DraggableItem.ItemMainContent>
                   <b>Qualification:</b>
                   Geography - AK: Aleutian East - AZ, NC, WA
@@ -86,9 +88,7 @@ export class TestDraggable extends Component {
               btnStyle="primary"
             />
           </DraggableFooter>
-        </Draggable> */}
-        <br />
-        Coming soon
+        </Draggable>
       </header>
     );
   }
