@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DatePicker } from '@tkxs/cast-ui';
+import { DatePicker } from '@tkxs/cast-ui/lib-esm';
 
 export class TestDatepicker extends Component {
   render() {

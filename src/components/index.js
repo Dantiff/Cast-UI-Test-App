@@ -4,7 +4,7 @@ export * from './Button';
 // export * from './ButtonGroup'
 // export * from './Checkbox'
 // export * from './CopyToClipboard'
-// export * from './Datepicker'
+export * from './Datepicker';
 export * from './Draggable';
 // export * from './IconButton'
 // export * from './Input'
