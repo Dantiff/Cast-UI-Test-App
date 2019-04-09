@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Table } from '@tkxs/cast-ui';
 
-import * as SampleData from './sampleData/sampleData.json';
-import * as ColumnDefs from './sampleData/sampleColumnDefs.json';
+import SampleData from './sampleData/sampleData';
+import ColumnDefs from './sampleData/sampleColumnDefs';
 
 export class TestTable extends Component {
   render() {
